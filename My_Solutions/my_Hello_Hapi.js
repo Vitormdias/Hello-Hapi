@@ -14,7 +14,11 @@ server.connection({
     port: Number(givenPort || 8080)
 });
 
-server.route({path: '/' , method: 'GET' , handler: my_hapi_handler});
+server.route({
+    path: '/' ,
+    method: 'GET' ,
+    handler: my_hapi_handler
+});
 
 server.start(function() {
     console.log('Server runnig at: ', server.info.uri);
